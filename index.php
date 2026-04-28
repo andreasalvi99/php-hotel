@@ -66,6 +66,7 @@
         <label class="form-check-label" for="checkDefault">
     Parcheggio
   </label>
+  <input type="number" name="vote" class="form-control" min="0" max="5">
   <button class="btn btn-primary d-block my-3" type="submit">Invia</button>
     </form>
 <table class="table mt-3">
