@@ -10,6 +10,18 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
+
+<div class="container mt-5 p-5">
+<form action="./filtro.php" class="form-control" method="GET">
+    <input class="form-check-input" type="checkbox" value="" id="checkDefault" name="parking">
+  <label class="form-check-label" for="checkDefault">
+    Default checkbox
+  </label>
+  <br>
+  <button type="submit" class="btn btn-primary">invia</button>
+</form>
+</div>
+
    
 <?php 
 
@@ -66,7 +78,7 @@
     // };
 
     echo '<div class="container p-5">
-    <table class="table my-5">
+    <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -121,7 +133,6 @@
   </tbody>
 </table>
 </div>';
-
 
 ?>
 
