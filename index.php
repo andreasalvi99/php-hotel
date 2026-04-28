@@ -58,6 +58,14 @@
     if(isset($_GET['parking']) && $_GET['parking'] === 'on') {
         $parking_availability = true;
     };
+
+$min_vote = 0;
+
+if(isset($_GET['vote']) && is_numeric($_GET['vote']) && $_GET['vote'] >= 0 && $_GET['vote'] <= 5 ) {
+    $min_vote = (int)$_GET['vote'];
+};
+
+var_dump($min_vote);
     
 ?>
 <div class="container">
