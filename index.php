@@ -65,8 +65,8 @@
 
     // };
 
-    echo '<div class="container my-4">
-    <table class="table">
+    echo '<div class="container p-5">
+    <table class="table my-5">
   <thead>
     <tr>
       <th scope="col">#</th>
