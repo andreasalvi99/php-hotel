@@ -53,9 +53,22 @@
 
     ];
 
+    $parking_availability = false;
+
+    if(isset($_GET['parking']) && $_GET['parking'] === 'on') {
+        $parking_availability = true;
+    };
+    
 ?>
 <div class="container">
-<table class="table">
+    <form action="" method="GET" class="mt-3">
+        <input type="checkbox" id="checkDefault" name="parking" class="form-check-input">
+        <label class="form-check-label" for="checkDefault">
+    Parcheggio
+  </label>
+  <button class="btn btn-primary d-block my-3" type="submit">Invia</button>
+    </form>
+<table class="table mt-3">
     <thead>
         <tr>
             <th>Nome</th>
@@ -70,13 +83,22 @@
 
         foreach($hotels as $hotel) {
 
+            var_dump($hotel);
+            
+            if($parking_availability) {
+                
+                if(!$hotel['parking']) {
+                    continue;
+                    }
+            };
+                    
         ?>
         <tr>
             <td><?php echo $hotel['name'] ?></td>
             <td><?php echo $hotel['description'] ?></td>
             <td><?php echo $hotel['parking'] === true ? 'Si' : 'No' ?></td>
             <td><?php echo $hotel['vote'] ?></td>
-            <td><?php echo $hotel['distance_to_center'] ?></td>
+            <td><?php echo $hotel['distance_to_center'] . ' km'?></td>
         </tr>
 
         <?php
@@ -86,5 +108,6 @@
 </table>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
