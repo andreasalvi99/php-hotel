@@ -13,6 +13,7 @@
    
 <?php 
 
+//^ Importo la struttura dati
  $hotels = [
 
         [
@@ -53,19 +54,21 @@
 
     ];
 
+//^ Setto variabile switch, falsa all'inizio, se l'utente mette il check sul filtro del parcheggio allora diventa vera
 $parking_availability = false;
 
+//^ Controllo sul filtro, prima controllo se esiste, poi controllo se è checkato o meno
 if(isset($_GET['parking']) && $_GET['parking'] === 'on') {
     $parking_availability = true;
 };
 
+//^ Setto variabile voto hotel, all'inizio è zero poi assume il valore assegnatogli dall'utente
 $min_vote = 0;
 
+//^ Controllo sul filtro del voto, se esiste, se è un numero e se è compreso tra zero e cinque
 if(isset($_GET['vote']) && is_numeric($_GET['vote']) && $_GET['vote'] >= 0 && $_GET['vote'] <= 5 ) {
     $min_vote = (int)$_GET['vote'];
 };
-
-var_dump($min_vote);
     
 ?>
 <div class="container">
@@ -90,20 +93,25 @@ var_dump($min_vote);
     <tbody>
         <?php
 
+//^ Ciclo foreach, per ogni hotel dell'array hotels mostro i dati
         foreach($hotels as $hotel) {
             
+        //^ Se il parcheggio è checkato, quindi se il filtro parcheggio è attivo
             if($parking_availability) {
                 
+            //^ E l'hotel non ha parcheggio allora salto l'iterazione
                 if(!$hotel['parking']) {
                     continue;
                     }
             };
                     
+        //^ Se il voto dell'hotel è inferiore a quello indicato dall'utente salto l'iterazione   
             if($hotel['vote'] < $min_vote) {
                 continue;
             }       
 
         ?>
+
         <tr>
             <td><?php echo $hotel['name'] ?></td>
             <td><?php echo $hotel['description'] ?></td>
