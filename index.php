@@ -53,17 +53,74 @@
 
     ];
 
-    foreach($hotels as $hotel) {
+    // foreach($hotels as $hotel) {
 
-        foreach($hotel as $key => $value) {
+    //     foreach($hotel as $key => $value) {
 
-            echo "$key : $value   ";
+    //         echo "$key : $value   ";
 
-        };
+    //     };
 
-        echo "<br>";
+    //     echo "<br>";
 
-    };
+    // };
+
+    echo '<div class="container my-4">
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Descrizione</th>
+      <th scope="col">Parcheggio</th>
+      <th scope="col">Voto</th>
+      <th scope="col">Distanza dal centro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>'. $hotels[0]['name'] .'</td>
+      <td>'. $hotels[0]['description'] .'</td>
+      <td>'. ($hotels[0]['parking'] === true ? 'Si' : 'No') .'</td>
+      <td>'. $hotels[0]['vote'] .'</td>
+      <td>'. $hotels[0]['distance_to_center'] . ' km' . '</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>'. $hotels[1]['name'] .'</td>
+      <td>'. $hotels[1]['description'] .'</td>
+      <td>'. ($hotels[1]['parking'] === true ? 'Si' : 'No') .'</td>
+      <td>'. $hotels[1]['vote'] .'</td>
+      <td>'. $hotels[1]['distance_to_center'] . ' km' . '</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>'. $hotels[2]['name'] .'</td>
+      <td>'. $hotels[2]['description'] .'</td>
+      <td>'. ($hotels[2]['parking'] === true ? 'Si' : 'No') .'</td>
+      <td>'. $hotels[2]['vote'] .'</td>
+      <td>'. $hotels[2]['distance_to_center'] . ' km' . '</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>'. $hotels[3]['name'] .'</td>
+      <td>'. $hotels[3]['description'] .'</td>
+      <td>'. ($hotels[3]['parking'] === true ? 'Si' : 'No') .'</td>
+      <td>'. $hotels[3]['vote'] .'</td>
+      <td>'. $hotels[3]['distance_to_center'] . ' km' . '</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>'. $hotels[4]['name'] .'</td>
+      <td>'. $hotels[4]['description'] .'</td>
+      <td>'. ($hotels[4]['parking'] === true ? 'Si' : 'No' ).'</td>
+      <td>'. $hotels[4]['vote'] .'</td>
+      <td>'. $hotels[4]['distance_to_center'] . ' km' . '</td>
+    </tr>
+  </tbody>
+</table>
+</div>';
 
 
 ?>
