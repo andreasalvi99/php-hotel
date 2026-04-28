@@ -95,7 +95,7 @@
       <td>'. $hotels[1]['distance_to_center'] . ' km' . '</td>
     </tr>
     <tr>
-      <th scope="row">2</th>
+      <th scope="row">3</th>
       <td>'. $hotels[2]['name'] .'</td>
       <td>'. $hotels[2]['description'] .'</td>
       <td>'. ($hotels[2]['parking'] === true ? 'Si' : 'No') .'</td>
@@ -103,7 +103,7 @@
       <td>'. $hotels[2]['distance_to_center'] . ' km' . '</td>
     </tr>
     <tr>
-      <th scope="row">2</th>
+      <th scope="row">4</th>
       <td>'. $hotels[3]['name'] .'</td>
       <td>'. $hotels[3]['description'] .'</td>
       <td>'. ($hotels[3]['parking'] === true ? 'Si' : 'No') .'</td>
@@ -111,7 +111,7 @@
       <td>'. $hotels[3]['distance_to_center'] . ' km' . '</td>
     </tr>
     <tr>
-      <th scope="row">2</th>
+      <th scope="row">5</th>
       <td>'. $hotels[4]['name'] .'</td>
       <td>'. $hotels[4]['description'] .'</td>
       <td>'. ($hotels[4]['parking'] === true ? 'Si' : 'No' ).'</td>
