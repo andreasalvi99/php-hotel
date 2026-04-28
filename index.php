@@ -53,11 +53,11 @@
 
     ];
 
-    $parking_availability = false;
+$parking_availability = false;
 
-    if(isset($_GET['parking']) && $_GET['parking'] === 'on') {
-        $parking_availability = true;
-    };
+if(isset($_GET['parking']) && $_GET['parking'] === 'on') {
+    $parking_availability = true;
+};
 
 $min_vote = 0;
 
@@ -91,8 +91,6 @@ var_dump($min_vote);
         <?php
 
         foreach($hotels as $hotel) {
-
-            var_dump($hotel);
             
             if($parking_availability) {
                 
@@ -101,6 +99,10 @@ var_dump($min_vote);
                     }
             };
                     
+            if($hotel['vote'] < $min_vote) {
+                continue;
+            }       
+
         ?>
         <tr>
             <td><?php echo $hotel['name'] ?></td>
